@@ -1,5 +1,5 @@
 function hasUserMedia() {
-	navigator.getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+  navigator.getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
   return !!navigator.getUserMedia;
 }
 
@@ -39,13 +39,13 @@ function startPeerConnection(stream) {
   };
   yourConnection = new RTCPeerConnection(configuration);
   theirConnection = new RTCPeerConnection(configuration);
-	
-	yourConnection.addStream(stream);
-	theirConnection.onaddstream = function (e) {
-		theirVideo.src = window.URL.createObjectURL(e);
-	};
 
-  
+  yourConnection.addStream(stream);
+  theirConnection.onaddstream = function (e) {
+    theirVideo.src = window.URL.createObjectURL(e);
+  };
+
+
   // 创建ICE处理
   yourConnection.onicecandidate = function (event) {
     if (event.candidate) {
@@ -62,12 +62,12 @@ function startPeerConnection(stream) {
   yourConnection.createOffer(function (offer) {
     yourConnection.setLocalDescription(offer);
     theirConnection.setRemoteDescription(offer);
-    
-		
+
+
     theirConnection.createAnswer(function (offer) {
       theirConnection.setLocalDescription(offer);
       yourConnection.setRemoteDescription(offer);
-      
+
     })
   });
 }
