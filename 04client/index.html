@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Learning WebRTC - Chapter 5: Connecting Clients Together</title>
-
+    <title>连接客户端到服务器</title>
     <style>
       body {
-        background-color: #3D6DF2;
+        background-color: chocolate;
         margin-top: 15px;
         font-family: sans-serif;
         color: white;
@@ -42,17 +41,17 @@
   </head>
   <body>
     <div id="login-page" class="page">
-      <h2>Login As</h2>
+      <h2>用户名:</h2>
       <input type="text" id="username" />
-      <button id="login">Login</button>
+      <button id="login">登录</button>
     </div>
 
     <div id="call-page" class="page">
       <video id="yours" autoplay></video>
       <video id="theirs" autoplay></video>
       <input type="text" id="their-username" />
-      <button id="call">Call</button>
-      <button id="hang-up">Hang Up</button>
+      <button id="call">呼叫</button>
+      <button id="hang-up">挂断</button>
     </div>
 
     <script src="client.js"></script>

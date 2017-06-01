@@ -61,6 +61,11 @@ connection.onerror = function (err) {
   console.log("发送错误: =>", err);
 };
 
+// 监听连接关闭
+connection.onclose = function (evt) {
+    console.log("连接关闭")
+};
+
 // 发送数据到服务器
 function send(message) {
   if (connectedUser) {
