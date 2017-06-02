@@ -14,9 +14,9 @@ p2p与传统连接(一般服务器为中介的模式)比较：
 
 WebRTC共分三个API。
 
-* MediaStream（又称getUserMedia）
-* RTCPeerConnection
-* RTCDataChannel
+* MediaStream: 获取音视频流
+* RTCPeerConnection: 音视频数据通信
+* RTCDataChannel: 二进制数据通信
 
 MediaStream 获取用户媒体信息
 
