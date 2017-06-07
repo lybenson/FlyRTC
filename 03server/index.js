@@ -1,7 +1,7 @@
 // 开启websocket服务
 var WebSocketServer = require('ws').Server,
-    wss = new WebSocketServer({ port: 8888 }),
-    users = {};
+  wss = new WebSocketServer({ port: 8888 }),
+  users = {};
 
 // 监听connection方法
 wss.on('connection', function (connection) {
@@ -130,5 +130,5 @@ function sendTo(conn, message) {
 
 // 开启websocket服务
 wss.on('listening', function () {
-    console.log("WebSocket服务正在监听8888端口...");
+  console.log("WebSocket服务正在监听8888端口...");
 });

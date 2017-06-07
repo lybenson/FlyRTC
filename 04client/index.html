@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
 
-    <title>连接客户端到服务器</title>
-    <style>
-      body {
-        background-color: chocolate;
-        margin-top: 15px;
-        font-family: sans-serif;
-        color: white;
-      }
+<head>
+  <meta charset="utf-8" />
 
-      video {
-        background: black;
-        border: 1px solid gray;
-      }
+  <title>连接客户端到服务器</title>
+  <style>
+    body {
+      background-color: chocolate;
+      margin-top: 15px;
+      font-family: sans-serif;
+      color: white;
+    }
 
-      .page {
-        position: relative;
-        display: block;
-        margin: 0 auto;
-        width: 500px;
-        height: 500px;
-      }
+    video {
+      background: black;
+      border: 1px solid gray;
+    }
 
-      #yours {
-        width: 150px;
-        height: 150px;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-      }
+    .page {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      width: 500px;
+      height: 500px;
+    }
 
-      #theirs {
-        width: 500px;
-        height: 500px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="login-page" class="page">
-      <h2>用户名:</h2>
-      <input type="text" id="username" />
-      <button id="login">登录</button>
-    </div>
+    #yours {
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
 
-    <div id="call-page" class="page">
-      <video id="yours" autoplay></video>
-      <video id="theirs" autoplay></video>
-      <input type="text" id="their-username" />
-      <button id="call">呼叫</button>
-      <button id="hang-up">挂断</button>
-    </div>
+    #theirs {
+      width: 500px;
+      height: 500px;
+    }
+  </style>
+</head>
 
-    <script src="client.js"></script>
-    <!--<script src="part3.js"></script>-->
-  </body>
+<body>
+  <div id="login-page" class="page">
+    <h2>用户名:</h2>
+    <input type="text" id="username" />
+    <button id="login">登录</button>
+  </div>
+
+  <div id="call-page" class="page">
+    <video id="yours" autoplay></video>
+    <video id="theirs" autoplay></video>
+    <input type="text" id="their-username" />
+    <button id="call">呼叫</button>
+    <button id="hang-up">挂断</button>
+  </div>
+
+  <script src="client.js"></script>
+  <!--<script src="part3.js"></script>-->
+</body>
+
 </html>
